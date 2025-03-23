@@ -1,0 +1,63 @@
+20,"t","Honey: Released March 15, 2024, by the National Agricultural Statistics Service (NASS), Agricultural Statistics Board, United States Department of Agriculture (USDA)."
+20,"t","Colonies, Yield, Production, Stocks, Price, and Value – States and United States: 2023"
+20,"t","[Colonies which produced honey in more than one State were counted in each State]"
+20,"h","","","","","","",""
+20,"h","","Honey","Yield","","","Average","Value"
+20,"h","State","producing","per","Production","Stocks","price per","of"
+20,"h","","colonies 1/","colony","","December 15 2/","pound 3/","production 4/"
+20,"h","","","","","","",""
+20,"u","","(1,000)","(pounds)","(1,000 pounds)","(1,000 pounds)","(dollars)","(1,000 dollars)"
+20,"d","Alabama",10,40,400,120,5.45,2180
+20,"d","Arizona",34,42,1428,600,2.23,3184
+20,"d","Arkansas",19,46,874,131,3.20,2797
+20,"d","California",324,42,13608,5035,2.27,30890
+20,"d","Colorado",25,41,1025,195,3.69,3782
+20,"d","Florida",147,32,4704,706,2.95,13877
+20,"d","Georgia",77,33,2541,152,3.43,8716
+20,"d","Idaho",92,32,2944,442,1.63,4799
+20,"d","Illinois",9,49,441,146,7.05,3109
+20,"d","",,,,,,
+20,"d","Indiana",9,53,477,329,4.34,2070
+20,"d","Iowa",40,66,2640,739,2.99,7894
+20,"d","Kansas",5,52,260,86,5.41,1407
+20,"d","Kentucky",10,30,300,84,6.21,1863
+20,"d","Louisiana",32,45,1440,101,3.90,5616
+20,"d","Maine",12,18,216,41,4.46,963
+20,"d","Michigan",70,55,3850,924,2.84,10934
+20,"d","Minnesota",106,58,6148,861,1.99,12235
+20,"d","Mississippi",19,42,798,367,3.02,2410
+20,"d","Missouri",9,43,387,101,4.81,1861
+20,"d","",,,,,,
+20,"d","Montana",114,85,9690,3392,2.00,19380
+20,"d","Nebraska",33,48,1584,554,2.26,3580
+20,"d","New Jersey",15,36,540,54,7.16,3866
+20,"d","New York",41,58,2378,761,4.59,10915
+20,"d","North Carolina",11,44,484,179,6.02,2914
+20,"d","North Dakota",511,75,38325,9198,1.77,67835
+20,"d","Ohio",20,65,1300,546,5.23,6799
+20,"d","Oregon",90,37,3330,1099,2.71,9024
+20,"d","Pennsylvania",20,55,1100,638,4.96,5456
+20,"d","South Carolina",11,52,572,114,4.53,2591
+20,"d","",,,,,,
+20,"d","South Dakota",212,87,18444,12542,2.02,37257
+20,"d","Tennessee",12,40,480,77,6.00,2880
+20,"d","Texas",111,35,3885,505,3.01,11694
+20,"d","Utah",24,42,1008,202,1.92,1935
+20,"d","Vermont",6,49,294,76,5.09,1496
+20,"d","Virginia",5,39,195,82,8.58,1673
+20,"d","Washington",83,27,2241,740,2.71,6073
+20,"d","West Virginia",6,51,306,177,6.35,1943
+20,"d","Wisconsin",62,45,2790,1004,3.02,8426
+20,"d","Wyoming",27,78,2106,400,1.64,3454
+20,"d","",,,,,,
+20,"d","Other States 5/ 6/",46,66,3038,516,4.68,14218
+20,"d","",,,,,,
+20,"d","United States 6/ 7/",2509,55.2,138571,44016,2.52,349199
+20,"c",""
+20,"f","1/ Honey producing colonies are the maximum number of colonies from which honey was harvested during the year. It is possible to harvest honey from colonies which did not survive the entire year."
+20,"f","2/ Stocks held by producers."
+20,"f","3/ Average price per pound based on expanded sales."
+20,"f","4/ Value of production is equal to production multiplied by average price per pound."
+20,"f","5/ Includes data for States not published in this table."
+20,"f","6/ Due to rounding, total colonies multiplied by total yield may not exactly equal production."
+20,"f","7/ United States value of production will not equal summation of States."

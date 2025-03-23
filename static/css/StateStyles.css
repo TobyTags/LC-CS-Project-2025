@@ -1,0 +1,207 @@
+
+
+/* styling for navbar */
+.navbar {
+    background-color: #333; /* Dark background for the navbar */
+    color: #ffffff;
+    text-align: center; /* Centers navbar contents */
+    padding: 10px 0; /* Adds padding inside the navbar */
+}
+
+/* Style for navigation links */
+.navbar a {
+    color: white; /* White text color */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Aligns links next to each other */
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    background-color: #4bbbbd; /* Changes background on hover */
+}
+
+/* Dropdown container setup */
+.dropdown {
+    position: relative; /* Needed for absolute positioning of dropdown content */
+    display: inline-block; /* Ensures the dropdown is aligned with other links */
+}
+
+/* Dropdown button styling */
+.dropbtn {
+    background-color: #333; /* Matches the navbar background */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No borders */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    border: 1px solid transparent; /* Ensures layout doesn't shift on hover */
+}
+
+.dropbtn:hover {
+    background-color: #4bbbbd;
+}
+
+/* Dropdown content box */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to its container */
+    background-color: #f9f9f9; /* Light background for the dropdown */
+    min-width: 160px; /* Minimum width */
+    max-height: 300px; /* Maximum height before scrolling */
+    overflow-y: auto; /* Enables vertical scrollbar when necessary */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+    z-index: 1; /* Keeps it on top of other content */
+}
+
+/* Styles for links inside the dropdown */
+.dropdown-content a {
+    color: black; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* Removes underline */
+    display: block; /* Ensures each link is on a new line */
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Showing the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Displays the dropdown content */
+}
+
+/* Adding a hover effect to dropdown links */
+.dropdown-content a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+}
+
+/* End of styling for the nav bar */
+
+
+
+
+
+
+
+.OverallHeading {
+    text-align: center;
+    color: #2643ac; /* Primary color */
+    font-weight: bold; /* Use font-weight for bold text */
+    font-size: 2.5em; /* Adjust the size as needed */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern, clean fonts */
+    margin: 20px 0; /* Spacing above and below the heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+.heading {
+    text-align: center;
+    color: #6f9a4d;
+    margin: 0 !important; /* Remove all margins */
+    padding: 0 !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.contanour {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 10px; /* Reduce padding if needed */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.contanour img {
+    display: block;
+    width: 100%;
+    margin: 0 !important; /* Remove any margin on the image */
+}
+
+
+.custom-button {
+    align-content: center;
+    background: linear-gradient(45deg, #6f9a4d, #2643ac);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.custom-button:active {
+    transform: scale(0.98);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* -THIS IS HERE FOR THE FOOTER --------------- */
+.footer-space {
+    background-color: #24b75c;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Optional spacing from content above */
+}
+
+.topbtn {
+    background: linear-gradient(45deg, #d46c74, #36c8e2);
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.topbtn:hover {
+    background-color: #f4f4f4;
+    transform: translateY(-3px);
+}
+/* END OF STYLING FOR THE FOOTER ----------------------------- */
+
+
+
+/* Start of information text ----------------------------- */
+.centerthismiddlepoint{
+    color: #2a3079;
+    text-align: center;
+}
+
+.contanourInfo {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 10px; /* Reduce padding if needed */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: #d2ede9;
+}
+/* end of information text ----------------------------- */
+
+
+.contanourInfoRecomondations {
+    max-width: 800px;
+    margin: 40px auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background-color: #bbe369;
+}

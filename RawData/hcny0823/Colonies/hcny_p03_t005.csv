@@ -1,0 +1,70 @@
+5,"t","Honey Bee Colonies: Released August 1, 2023, by the National Agricultural Statistics Service (NASS), Agricultural Statistics Board, United States Department of Agriculture (USDA)."
+5,"t","Colonies, Maximum, Lost, Percent Lost, Added, Renovated, and Percent Renovated with Five or More Colonies – States and United States: January 1, 2022 and January-March 2022"
+5,"h","","","","","","","",""
+5,"h","","","January-March","January-March","January-March","January-March","January-March","January-March"
+5,"h","State","January 1","","","","","",""
+5,"h","","colonies","Maximum","Lost","Percent","Added","Renovated","Percent"
+5,"h","","","colonies 1/","colonies","lost 2/","colonies","colonies 3/","renovated 4/"
+5,"h","","","","","","","",""
+5,"u","","(number)","(number)","(number)","(percent)","(number)","(number)","(percent)"
+5,"d","Alabama",7500,11500,1100,10,1600,520,5
+5,"d","Arizona",25000,32000,2300,7,720,10,"(Z)"
+5,"d","Arkansas",18500,21000,2600,12,780,20,"(Z)"
+5,"d","California",1060000,1520000,162000,11,139000,95000,6
+5,"d","Colorado",3800,8500,540,6,-,10,"(Z)"
+5,"d","Connecticut",3500,4500,420,9,10,170,4
+5,"d","Florida",295000,295000,24000,8,50000,13500,5
+5,"d","Georgia",118000,119000,14000,12,26000,18000,15
+5,"d","Idaho",194000,215000,8000,4,7500,1000,"(Z)"
+5,"d","",,,,,,,
+5,"d","Illinois",11500,11500,2200,19,900,140,1
+5,"d","Indiana",9500,9500,2900,31,1300,30,"(Z)"
+5,"d","Iowa",26000,29000,2800,10,610,30,"(Z)"
+5,"d","Kansas",4000,5000,520,10,240,60,1
+5,"d","Kentucky",8500,9500,1300,14,50,160,2
+5,"d","Louisiana",35000,37000,6000,16,11000,2200,6
+5,"d","Maine",3100,8000,340,4,-,120,2
+5,"d","Maryland",6500,8500,1900,22,1100,1000,12
+5,"d","Massachusetts",6000,6000,950,16,350,510,9
+5,"d","Michigan",66000,71000,4500,6,1400,2500,4
+5,"d","",,,,,,,
+5,"d","Minnesota",78000,97000,1500,2,4800,80,"(Z)"
+5,"d","Mississippi",20000,37000,3400,9,12000,2300,6
+5,"d","Missouri",4800,11000,730,7,310,570,5
+5,"d","Montana",45000,54000,300,1,30,-,-
+5,"d","Nebraska",24000,30000,840,3,30,-,-
+5,"d","New Jersey",11500,15000,550,4,1500,30,"(Z)"
+5,"d","New Mexico",5500,8000,1900,24,1000,-,-
+5,"d","New York",44000,44000,5500,13,370,730,2
+5,"d","North Carolina",20000,24000,2300,10,3100,520,2
+5,"d","North Dakota",75000,89000,120,"(Z)",300,-,-
+5,"d","",,,,,,,
+5,"d","Ohio",16000,16000,2400,15,1600,530,3
+5,"d","Oklahoma",20000,20000,3000,15,50,3500,18
+5,"d","Oregon",85000,96000,5000,5,2400,310,"(Z)"
+5,"d","Pennsylvania",20000,23000,2800,12,2500,360,2
+5,"d","South Carolina",17000,20000,2500,13,4500,830,4
+5,"d","South Dakota",21000,28000,1000,4,40,-,-
+5,"d","Tennessee",10500,10500,2300,22,1300,200,2
+5,"d","Texas",270000,400000,37000,9,80000,34000,9
+5,"d","Utah",28000,32000,4100,13,4600,740,2
+5,"d","Vermont",7000,7500,380,5,250,-,-
+5,"d","",,,,,,,
+5,"d","Virginia",7500,9500,1700,18,1100,200,2
+5,"d","Washington",70000,102000,7500,7,1400,6000,6
+5,"d","West Virginia",4600,5000,1000,20,1000,200,4
+5,"d","Wisconsin",39000,53000,2800,5,1400,240,"(Z)"
+5,"d","Wyoming",6000,8000,180,2,20,-,-
+5,"d","",,,,,,,
+5,"d","Other States 5/",24870,30870,2310,7,620,1060,3
+5,"d","",,,,,,,
+5,"d","United States",2875670,"(X)",331480,12,368780,187380,7
+5,"c",""
+5,"f","-  Represents zero."
+5,"f","(X)  Not applicable."
+5,"f","(Z)  Less than half of the unit shown."
+5,"f","1/ January 1 colonies plus all colonies moved into that state during the quarter."
+5,"f","2/ Percent lost is the number of lost colonies divided by maximum colonies except for the United States, where percent lost is the number of lost colonies divided by the January 1 colonies."
+5,"f","3/ Defined as any surviving colony that was requeened or received new honey bees through nuc or package."
+5,"f","4/ Percent renovated is the number of renovated colonies divided by maximum colonies except for the United States, where percent renovated is the number of renovated colonies divided by the January 1 colonies."
+5,"f","5/ Includes data for States not published in this table."

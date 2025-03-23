@@ -1,0 +1,67 @@
+12,"t","Honey Bee Colonies: Released August 1, 2023, by the National Agricultural Statistics Service (NASS), Agricultural Statistics Board, United States Department of Agriculture (USDA)."
+12,"t","Colony Health Stressors with Five or More Colonies – States and United States: January-March 2023"
+12,"t","[Percent of colonies affected by stressors anytime during the quarter. A colony may be affected by multiple stressors during the quarter]"
+12,"h","","","","","","",""
+12,"h","","Varroa","Other pests","","","",""
+12,"h","State","mites","and parasites 1/","Diseases 2/","Pesticides","Other 3/","Unknown"
+12,"h","","","","","","",""
+12,"u","","(percent)","(percent)","(percent)","(percent)","(percent)","(percent)"
+12,"d","Alabama",31.9,18.3,0.7,1.5,9.9,8.3
+12,"d","Arizona",72.9,-,-,"(Z)","(Z)",0.5
+12,"d","Arkansas",62.2,51.4,5.3,24.7,2.0,5.9
+12,"d","California",48.7,18.2,11.3,14.1,23.0,16.7
+12,"d","Colorado",1.8,-,-,"(Z)",0.9,1.4
+12,"d","Connecticut",10.8,1.8,-,0.1,2.8,7.2
+12,"d","Florida",28.1,11.1,3.5,5.6,4.2,8.5
+12,"d","Georgia",31.2,1.3,"(Z)",7.7,1.7,7.4
+12,"d","Idaho",12.1,2.8,"(Z)",5.3,1.2,6.0
+12,"d","",,,,,,
+12,"d","Illinois",21.5,9.0,0.6,0.9,10.5,10.0
+12,"d","Indiana",24.8,4.5,"(Z)",-,6.0,2.3
+12,"d","Iowa",26.9,1.0,1.3,2.2,1.4,3.2
+12,"d","Kansas",20.9,2.7,0.8,5.4,8.9,2.7
+12,"d","Kentucky",16.6,5.9,0.6,1.7,3.2,9.4
+12,"d","Louisiana",48.2,10.0,2.4,2.0,2.9,6.0
+12,"d","Maine",16.8,-,-,1.5,0.8,2.5
+12,"d","Maryland",16.4,4.7,2.5,-,7.3,3.9
+12,"d","Massachusetts",9.6,2.7,1.5,-,5.2,1.8
+12,"d","Michigan",6.5,0.6,0.5,1.2,1.1,1.7
+12,"d","",,,,,,
+12,"d","Minnesota",9.2,"(Z)",0.8,"(Z)",1.3,1.4
+12,"d","Mississippi",19.6,9.6,1.1,7.5,15.4,2.7
+12,"d","Missouri",12.7,4.3,-,-,3.6,9.5
+12,"d","Montana",0.6,-,-,"(Z)",-,"(Z)"
+12,"d","Nebraska",8.2,"(Z)","(Z)",-,4.3,"(Z)"
+12,"d","New Jersey",20.0,6.7,"(Z)",-,1.7,3.8
+12,"d","New Mexico",84.2,"(Z)",64.8,1.0,0.9,1.4
+12,"d","New York",33.5,10.3,22.6,1.4,3.9,4.9
+12,"d","North Carolina",22.5,6.1,"(Z)","(Z)",4.5,2.5
+12,"d","North Dakota",16.2,-,-,"(Z)",0.6,-
+12,"d","",,,,,,
+12,"d","Ohio",37.8,10.6,-,11.5,20.1,4.3
+12,"d","Oklahoma",4.7,1.1,-,"(Z)",2.8,"(Z)"
+12,"d","Oregon",28.7,13.1,6.0,"(Z)",11.4,2.0
+12,"d","Pennsylvania",20.9,4.6,2.5,0.7,2.0,7.7
+12,"d","South Carolina",32.2,7.3,-,"(Z)",10.4,7.4
+12,"d","South Dakota",2.7,"Z","(Z)","(Z)",1.8,1.0
+12,"d","Tennessee",39.8,5.5,0.9,1.0,7.0,4.9
+12,"d","Texas",11.3,6.7,"(Z)",7.6,9.7,1.1
+12,"d","Utah",32.4,19.4,19.0,19.0,2.8,2.0
+12,"d","Vermont",3.1,"(Z)","(Z)","(Z)",-,1.6
+12,"d","",,,,,,
+12,"d","Virginia",22.6,10.5,"(Z)","(Z)",4.2,4.8
+12,"d","Washington",12.1,2.4,2.3,2.5,6.4,4.5
+12,"d","West Virginia",14.5,2.8,1.0,1.1,2.0,3.4
+12,"d","Wisconsin",15.0,0.9,0.8,0.5,2.7,7.2
+12,"d","Wyoming",1.4,-,-,-,1.4,"(Z)"
+12,"d","",,,,,,
+12,"d","Other States 4/",27.2,19.0,13.6,"(Z)",1.1,"(Z)"
+12,"d","",,,,,,
+12,"d","United States",39.7,13.6,7.4,10.1,14.8,11.2
+12,"c",""
+12,"f","-  Represents zero."
+12,"f","(Z)  Less than half of the unit shown."
+12,"f","1/ Tracheal mites, nosema, hive beetle, wax moths, etc."
+12,"f","2/ Includes American and European foulbrood, chalkbrood, stonebrood, paralysis (acute and chronic), kashmir, deformed wing, sacbrood, IAPV, Lake Sinai II, etc."
+12,"f","3/ Includes weather, starvation, insufficient forage, queen failure, hive damage/destroyed, etc."
+12,"f","4/ Includes data for States not published in this table."

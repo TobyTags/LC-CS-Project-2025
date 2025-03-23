@@ -1,0 +1,70 @@
+11,"t","Honey Bee Colonies: Released August 1, 2023, by the National Agricultural Statistics Service (NASS), Agricultural Statistics Board, United States Department of Agriculture (USDA)."
+11,"t","Colonies, Maximum, Lost, Percent Lost, Added, Renovated, and Percent Renovated with Five or More Colonies – States and United States: January 1, 2023 and January-March 2023"
+11,"h","","","","","","","",""
+11,"h","","","January-March","January-March","January-March","January-March","January-March","January-March"
+11,"h","State","January 1","","","","","",""
+11,"h","","colonies","Maximum","Lost","Percent","Added","Renovated","Percent"
+11,"h","","","colonies 1/","colonies","lost 2/","colonies","colonies 3/","renovated 4/"
+11,"h","","","","","","","",""
+11,"u","","(number)","(number)","(number)","(percent)","(number)","(number)","(percent)"
+11,"d","Alabama",11000,14000,1400,10,2000,880,6
+11,"d","Arizona",34000,34000,510,2,290,80,"(Z)"
+11,"d","Arkansas",21000,23000,2200,10,1200,10,"(Z)"
+11,"d","California",1040000,1330000,196000,15,88000,48000,4
+11,"d","Colorado",7500,10000,520,5,500,-,"(Z)"
+11,"d","Connecticut",3600,4000,360,9,480,70,2
+11,"d","Florida",270000,305000,34000,11,51000,18500,6
+11,"d","Georgia",121000,121000,13000,11,18500,8000,7
+11,"d","Idaho",165000,167000,12500,7,4000,8000,5
+11,"d","",,,,,,,
+11,"d","Illinois",9000,9500,1800,19,1700,320,3
+11,"d","Indiana",7000,7000,1300,19,3200,40,1
+11,"d","Iowa",36000,53000,1700,3,10500,240,"(Z)"
+11,"d","Kansas",3300,3900,490,13,940,20,1
+11,"d","Kentucky",9500,10500,1100,10,260,80,1
+11,"d","Louisiana",25000,38000,4800,13,6000,3700,10
+11,"d","Maine",2600,7500,290,4,190,130,2
+11,"d","Maryland",6000,6000,1100,18,670,140,2
+11,"d","Massachusetts",6000,8000,820,10,180,80,1
+11,"d","Michigan",54000,64000,9000,14,330,2100,3
+11,"d","",,,,,,,
+11,"d","Minnesota",41000,52000,1100,2,4000,1600,3
+11,"d","Mississippi",29000,37000,2300,6,65000,4100,11
+11,"d","Missouri",6500,6500,940,14,3900,100,2
+11,"d","Montana",23000,45000,70,"(Z)",6000,-,"(Z)"
+11,"d","Nebraska",17000,23000,1100,5,-,-,-
+11,"d","New Jersey",12500,12500,1300,10,3100,110,1
+11,"d","New Mexico",8500,8500,4600,54,460,760,9
+11,"d","New York",40000,40000,8000,20,560,510,1
+11,"d","North Carolina",26000,30000,4100,14,2200,2800,9
+11,"d","North Dakota",82000,89000,2400,3,2700,1000,1
+11,"d","",,,,,,,
+11,"d","Ohio",17500,19500,2500,13,1200,160,1
+11,"d","Oklahoma",16500,17000,1600,9,10,-,-
+11,"d","Oregon",77000,87000,8000,9,11500,500,1
+11,"d","Pennsylvania",27000,28000,4800,17,1800,490,2
+11,"d","South Carolina",14500,16500,1700,10,2700,800,5
+11,"d","South Dakota",53000,58000,2200,4,-,-,-
+11,"d","Tennessee",11000,11500,1800,16,2800,40,"(Z)"
+11,"d","Texas",171000,300000,20000,7,62000,8500,3
+11,"d","Utah",19000,24000,2600,11,900,360,2
+11,"d","Vermont",10000,10000,400,4,30,40,"(Z)"
+11,"d","",,,,,,,
+11,"d","Virginia",9500,10500,1200,11,470,150,1
+11,"d","Washington",65000,81000,13500,17,19000,250,"(Z)"
+11,"d","West Virginia",5000,6000,600,10,40,40,1
+11,"d","Wisconsin",27000,29000,3300,11,1400,270,1
+11,"d","Wyoming",10500,15000,150,1,1500,-,-
+11,"d","",,,,,,,
+11,"d","Other States 5/",27750,31650,730,2,1580,470,1
+11,"d","",,,,,,,
+11,"d","United States",2678250,"(X)",373880,14,384790,113440,4
+11,"c",""
+11,"f","-  Represents zero."
+11,"f","(X)  Not applicable."
+11,"f","(Z)  Less than half of the unit shown."
+11,"f","1/ January 1 colonies plus all colonies moved into that state during the quarter."
+11,"f","2/ Percent lost is the number of lost colonies divided by maximum colonies except for the United States, where percent lost is the number of lost colonies divided by the January 1 colonies."
+11,"f","3/ Defined as any surviving colony that was requeened or received new honey bees through nuc or package."
+11,"f","4/ Percent renovated is the number of renovated colonies divided by maximum colonies except for the United States, where percent renovated is the number of renovated colonies divided by the January 1 colonies."
+11,"f","5/ Includes data for States not published in this table."

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/StateStyles.css') }}">
+    </head>
+
+    <body> 
+
+        <!-- Nav bar code right here -->
+        <div class="navbar">
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">See Graphs per State</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('state_page', state='Alabama') }}">Alabama</a>
+                    <a href="{{ url_for('state_page', state='Arizona') }}">Arizona</a>
+                    <a href="{{ url_for('state_page', state='Arkansas') }}">Arkansas</a>
+                    <a href="{{ url_for('state_page', state='California') }}">California</a>
+                    <a href="{{ url_for('state_page', state='Colorado') }}">Colorado</a>
+                    <a href="{{ url_for('state_page', state='Connecticut') }}">Connecticut</a>
+                    <a href="{{ url_for('state_page', state='Florida') }}">Florida</a>
+                    <a href="{{ url_for('state_page', state='Georgia') }}">Georgia</a>
+                    <a href="{{ url_for('state_page', state='Idaho') }}">Idaho</a>
+                    <a href="{{ url_for('state_page', state='Illinois') }}">Illinois</a>
+                    <a href="{{ url_for('state_page', state='Indiana') }}">Indiana</a>
+                    <a href="{{ url_for('state_page', state='Iowa') }}">Iowa</a>
+                    <a href="{{ url_for('state_page', state='Kansas') }}">Kansas</a>
+                    <a href="{{ url_for('state_page', state='Kentucky') }}">Kentucky</a>
+                    <a href="{{ url_for('state_page', state='Louisiana') }}">Louisiana</a>
+                    <a href="{{ url_for('state_page', state='Maine') }}">Maine</a>
+                    <a href="{{ url_for('state_page', state='Maryland') }}">Maryland</a>
+                    <a href="{{ url_for('state_page', state='Massachusetts') }}">Massachusetts</a>
+                    <a href="{{ url_for('state_page', state='Michigan') }}">Michigan</a>
+                    <a href="{{ url_for('state_page', state='Minnesota') }}">Minnesota</a>
+                    <a href="{{ url_for('state_page', state='Mississippi') }}">Mississippi</a>
+                    <a href="{{ url_for('state_page', state='Missouri') }}">Missouri</a>
+                    <a href="{{ url_for('state_page', state='Montana') }}">Montana</a>
+                    <a href="{{ url_for('state_page', state='Nebraska') }}">Nebraska</a>
+                    <a href="{{ url_for('state_page', state='New Jersey') }}">New Jersey</a>
+                    <a href="{{ url_for('state_page', state='New Mexico') }}">New Mexico</a>
+                    <a href="{{ url_for('state_page', state='New York') }}">New York</a>
+                    <a href="{{ url_for('state_page', state='North Carolina') }}">North Carolina</a>
+                    <a href="{{ url_for('state_page', state='North Dakota') }}">North Dakota</a>
+                    <a href="{{ url_for('state_page', state='Ohio') }}">Ohio</a>
+                    <a href="{{ url_for('state_page', state='Oklahoma') }}">Oklahoma</a>
+                    <a href="{{ url_for('state_page', state='Oregon') }}">Oregon</a>
+                    <a href="{{ url_for('state_page', state='Pennsylvania') }}">Pennsylvania</a>
+                    <a href="{{ url_for('state_page', state='South Carolina') }}">South Carolina</a>
+                    <a href="{{ url_for('state_page', state='South Dakota') }}">South Dakota</a>
+                    <a href="{{ url_for('state_page', state='Tennessee') }}">Tennessee</a>
+                    <a href="{{ url_for('state_page', state='Texas') }}">Texas</a>
+                    <a href="{{ url_for('state_page', state='Utah') }}">Utah</a>
+                    <a href="{{ url_for('state_page', state='Vermont') }}">Vermont</a>
+                    <a href="{{ url_for('state_page', state='Virginia') }}">Virginia</a>
+                    <a href="{{ url_for('state_page', state='Washington') }}">Washington</a>
+                    <a href="{{ url_for('state_page', state='West Virginia') }}">West Virginia</a>
+                    <a href="{{ url_for('state_page', state='Wisconsin') }}">Wisconsin</a>
+                    <a href="{{ url_for('state_page', state='Wyoming') }}">Wyoming</a>
+                </div>
+            </div>
+            <a href="{{ url_for('OverallGraphs') }}">See overall graphs</a>
+            <a id="data-status">Checking data status... </a>
+        </div>
+
+
+
+        <h1 class="OverallHeading">Bee Visualiser for the state of {{ state }}</h1>
+
+        <!-- Button to trigger the fetch -->
+        <div class="button-container">
+            <button class="custom-button" onclick="sendState()">Load Graphs! (If not done so already).</button>
+        </div>
+
+        <div class="contanour">
+            <h1 class="heading">Mite Percentage Trends for {{ state }}</h1>
+            <img src="{{ url_for('graphs', filename= state ~ '_graphs/' ~ state ~ '_mite_trends.png') }}" alt="Mite Percentage Graph">
+        </div>
+
+        <div class="contanour">
+            <h1 class="heading">Population Trends for {{ state }}</h1>
+            <img src="{{ url_for('graphs', filename= state ~ '_graphs/' ~ state ~ 'PopulationTrends.png') }}" alt="Mite Percentage Graph">
+        </div>
+
+        <div class="contanour">
+            <h1 class="heading">Population and Mites trends for {{ state }}</h1>
+            <img src="{{ url_for('graphs', filename= state ~ '_graphs/' ~ state ~ 'PopulationAndMitesTrends.png') }}" alt="Mite Percentage Graph">
+        </div>
+
+        <div class="contanourInfoRecomondations">
+            <h1>
+                <div class="centerthismiddlepoint"> <B>Recommendations</B> </div>
+            <h1>
+        </div>
+
+        <div class="contanourInfo">
+            <p>
+                <B> Relationship: </B> The rate of growth of honey bees is proportional to the amount of mites. Whereby the higher the percent of mites present the lower the rate of population growth. 
+                <hr>
+                <div class="centerthismiddlepoint"> <B>Ways to reduce mite infections?</B> </div> <br>
+                <B>Screened Bottom Boards: </B> Replacing solid bottom boards with screened ones allows mites to fall out of the hive, reducing their numbers. <br>
+                <B>Drone Brood Removal: </B> Mites prefer drone brood cells; removing and freezing infested drone combs helps control populations. <br>
+                <B>Sugar Dusting: </B> Sprinkling powdered sugar on bees encourages grooming, helping dislodge mites. <br>
+                <hr>
+                From my reaserch I have seen that there is a 6 month delay in seeing the effect of mite concentration levels to the drop in populaiton, The graph below matches the bee colony popultions with a 6 month delayed mite percentage infection. <br>
+            <p>
+        </div>
+
+        <div class="contanour">
+            <h1 class="heading">Population and Mites trends for {{ state }}</h1>
+            <img src="{{ url_for('graphs', filename= state ~ '_graphs/' ~ state ~ 'InterpretationOffset_PopulationAndMitesTrends.png') }}" alt="Mite Percentage Graph">
+        </div>
+
+        <div class="contanourInfo">
+            <p>
+                <div class="centerthismiddlepoint"> <B>Graph Interpretaion</B> </div> <br>
+    
+                While there is always going to be an extent of randomness to bee population trends due to the nature of it being a biological species, on average if you get the DY/DX of mites at a given time point on the graph above and compare it to the DY/DX at the same timestamp of bee colonies, you should observe an opposite relationship (when one is positive the other is negative). <br>
+                <hr>
+                The graph below shows the differentiation of the data.
+            <p>
+        </div>
+
+        <div class="contanour">
+            <img src="{{ url_for('graphs', filename= state ~ '_graphs/' ~ state ~ '_RateOfChange_PopulationAndMites.png') }}" alt="Mite Percentage Graph">
+        </div>
+
+
+
+        <!-- Black space at the end of the page (this stops the last graph from getting restricted) -->
+        <div class="footer-space">
+            <a class="topbtn" href="#"><B>Back to top</B></a>
+        </div>
+
+        <script>
+            function sendState() {
+                // Get the state variable passed from Flask/Jinja2
+                let state = "{{ state }}";
+                // Construct the URL with the variable as a query parameter
+                let url = `/process_variable?variable=${encodeURIComponent(state)}`;
+                console.log("Fetching URL:", url);
+                
+                // Make a GET request to the endpoint
+                fetch(url)
+                    .then(response => {
+                    console.log("Response status:", response.status);
+                    // Optionally, you can parse it as text instead of JSON
+                    return response.text();
+                    })
+                    .then(text => {
+                    console.log('Response from server:', text);
+                    // After 0.01 seconds, force reload the page
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 10);
+                    })
+                .catch(error => console.error('Error:', error));
+
+                fetch('/DataTracker')
+                    .then(response => response.json())
+                    .then(data => {
+                        const statusDiv = document.getElementById('data-status');
+                        if (data.Data) {
+                            
+                        } else {
+                            alert("Cleaned data does not exist! Please run the python script from the home page first.")
+                        }
+                    })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('data-status').innerText = "Error checking data status.";
+                });
+            }
+
+
+
+            window.onload = function() {
+                //this is for the variable that says weather there is cleaned data or is it gone (deleted)
+                fetch('/DataTracker')
+                    .then(response => response.json())
+                    .then(data => {
+                        const statusDiv = document.getElementById('data-status');
+                        if (data.Data) {
+                            statusDiv.innerText = "Cleaned data exists.";
+                            statusDiv.style.backgroundColor = "green";
+                        } else {
+                            statusDiv.innerText = "Cleaned data does not exist.";
+                            statusDiv.style.backgroundColor = "red";
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('data-status').innerText = "Error checking data status.";
+                    });
+            }
+        </script>
+          
+          
+          
+
+    </body>
+</html>
+

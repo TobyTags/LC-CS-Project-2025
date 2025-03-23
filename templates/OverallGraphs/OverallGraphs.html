@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/OverallStyles.css') }}">
+    </head>
+
+    <body> 
+
+        <!-- Nav bar code right here -->
+        <div class="navbar">
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">See Graphs per State</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('state_page', state='Alabama') }}">Alabama</a>
+                    <a href="{{ url_for('state_page', state='Arizona') }}">Arizona</a>
+                    <a href="{{ url_for('state_page', state='Arkansas') }}">Arkansas</a>
+                    <a href="{{ url_for('state_page', state='California') }}">California</a>
+                    <a href="{{ url_for('state_page', state='Colorado') }}">Colorado</a>
+                    <a href="{{ url_for('state_page', state='Connecticut') }}">Connecticut</a>
+                    <a href="{{ url_for('state_page', state='Florida') }}">Florida</a>
+                    <a href="{{ url_for('state_page', state='Georgia') }}">Georgia</a>
+                    <a href="{{ url_for('state_page', state='Idaho') }}">Idaho</a>
+                    <a href="{{ url_for('state_page', state='Illinois') }}">Illinois</a>
+                    <a href="{{ url_for('state_page', state='Indiana') }}">Indiana</a>
+                    <a href="{{ url_for('state_page', state='Iowa') }}">Iowa</a>
+                    <a href="{{ url_for('state_page', state='Kansas') }}">Kansas</a>
+                    <a href="{{ url_for('state_page', state='Kentucky') }}">Kentucky</a>
+                    <a href="{{ url_for('state_page', state='Louisiana') }}">Louisiana</a>
+                    <a href="{{ url_for('state_page', state='Maine') }}">Maine</a>
+                    <a href="{{ url_for('state_page', state='Maryland') }}">Maryland</a>
+                    <a href="{{ url_for('state_page', state='Massachusetts') }}">Massachusetts</a>
+                    <a href="{{ url_for('state_page', state='Michigan') }}">Michigan</a>
+                    <a href="{{ url_for('state_page', state='Minnesota') }}">Minnesota</a>
+                    <a href="{{ url_for('state_page', state='Mississippi') }}">Mississippi</a>
+                    <a href="{{ url_for('state_page', state='Missouri') }}">Missouri</a>
+                    <a href="{{ url_for('state_page', state='Montana') }}">Montana</a>
+                    <a href="{{ url_for('state_page', state='Nebraska') }}">Nebraska</a>
+                    <a href="{{ url_for('state_page', state='New Jersey') }}">New Jersey</a>
+                    <a href="{{ url_for('state_page', state='New Mexico') }}">New Mexico</a>
+                    <a href="{{ url_for('state_page', state='New York') }}">New York</a>
+                    <a href="{{ url_for('state_page', state='North Carolina') }}">North Carolina</a>
+                    <a href="{{ url_for('state_page', state='North Dakota') }}">North Dakota</a>
+                    <a href="{{ url_for('state_page', state='Ohio') }}">Ohio</a>
+                    <a href="{{ url_for('state_page', state='Oklahoma') }}">Oklahoma</a>
+                    <a href="{{ url_for('state_page', state='Oregon') }}">Oregon</a>
+                    <a href="{{ url_for('state_page', state='Pennsylvania') }}">Pennsylvania</a>
+                    <a href="{{ url_for('state_page', state='South Carolina') }}">South Carolina</a>
+                    <a href="{{ url_for('state_page', state='South Dakota') }}">South Dakota</a>
+                    <a href="{{ url_for('state_page', state='Tennessee') }}">Tennessee</a>
+                    <a href="{{ url_for('state_page', state='Texas') }}">Texas</a>
+                    <a href="{{ url_for('state_page', state='Utah') }}">Utah</a>
+                    <a href="{{ url_for('state_page', state='Vermont') }}">Vermont</a>
+                    <a href="{{ url_for('state_page', state='Virginia') }}">Virginia</a>
+                    <a href="{{ url_for('state_page', state='Washington') }}">Washington</a>
+                    <a href="{{ url_for('state_page', state='West Virginia') }}">West Virginia</a>
+                    <a href="{{ url_for('state_page', state='Wisconsin') }}">Wisconsin</a>
+                    <a href="{{ url_for('state_page', state='Wyoming') }}">Wyoming</a>
+                </div>
+            </div>
+            <a href="{{ url_for('OverallGraphs') }}">See overall graphs</a>
+            <a id="data-status">Checking data status... </a>
+        </div>
+
+        <!-- Heading (the '{{ sate }}' is used as a variable that allows it to dynamicly show different U.S.A states)-->
+        <h1 class="OverallHeading">Overall Bee Visualiser</h1>
+
+        <!-- Button that triggers the fetch call in the js that makes the call to the end point in the app.py that runs the python script that creates the overall graphs -->
+        <div class="button-container">
+            <button class="custom-button" onclick="GetOverallGraphs()">Load Overall Graphs!</button>
+        </div>
+
+        <!-- below are the actaul graphs inside their wrappers-->
+        <div class="wrapper">
+            <img class="zoomable" class="zoomable" src="{{ url_for('graphs', filename='OverallGraphs/Average_Colonies_by_State.jpg') }}" alt="Graph">
+        </div>
+
+        <div class="DivExpaliner">
+            <h2><b>Recomendatin:</b> <br>^ If your looking to set up a bee farm, I would recomend florida as there are there is the biggest colony there. ^</h2>
+        </div>
+
+        <div class="wrapper">
+            <img class="zoomable" class="zoomable" src="{{ url_for('graphs', filename='OverallGraphs/Average_Mite_Percentage_by_State.jpg') }}" alt="Graph">
+        </div>
+
+        <div class="wrapper"> <!-- This is the one based on the user pole-->
+            <img class="zoomable" class="zoomable" src="{{ url_for('graphs', filename='UserPole.jpg') }}" alt="Graph">
+        </div>
+
+        <div class="DivExpaliner">
+            <h2>^ Hint, you must hit "Load Overall Data" to update the user data ^</h2>
+        </div>
+
+
+        <!-- Blank space at the end of the page (this stops the last graph from getting restricted) -->
+        <div class="footer-space">
+            <a class="topbtn" href="#"><B>Back to top</B></a>
+        </div>
+
+
+
+        <!-- this script has the function to allow the user to zoom into the images-->
+        <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+        <script>
+            // For each element with the class 'zoomable', initialize Panzoom
+            document.querySelectorAll('.zoomable').forEach(img => {
+              const panzoomInstance = Panzoom(img, {
+                maxScale: 5,
+                contain: 'outside'
+              });
+              // Bind the mouse wheel event to the parent container (wrapper)
+              const wrapper = img.closest('.wrapper');
+              if (wrapper) {
+                wrapper.addEventListener('wheel', panzoomInstance.zoomWithWheel);
+              }
+            });
+        </script>
+
+
+        <!-- this script makes the call to create the graphs-->
+        <script>
+            function GetOverallGraphs() {
+                // Make a GET request to the endpoint in your Flask app that runs the function
+                fetch('/run_overall_graphs')
+                    .then(response => response.text())
+                    .then(text => {
+                        console.log('Response from server:', text);
+                        // After 2 seconds, force reload the page
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 10);
+                    })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+                fetch('/DataTracker')
+                    .then(response => response.json())
+                    .then(data => {
+                        const statusDiv = document.getElementById('data-status');
+                        if (data.Data) {
+                            
+                        } else {
+                            alert("Cleaned data does not exist! Please run the python script from the home page first.")
+                        }
+                    })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('data-status').innerText = "Error checking data status.";
+                });
+            }
+        </script>
+
+        <!-- this is in charge of traking if there is parsed data or not-->
+        <script>
+            window.onload = function() {
+                //this is for the variable that says weather there is cleaned data or is it gone (deleted)
+                fetch('/DataTracker')
+                    .then(response => response.json())
+                    .then(data => {
+                        const statusDiv = document.getElementById('data-status');
+                        if (data.Data) {
+                            statusDiv.innerText = "Cleaned data exists.";
+                            statusDiv.style.backgroundColor = "green";
+                        } else {
+                            statusDiv.innerText = "Cleaned data does not exist.";
+                            statusDiv.style.backgroundColor = "red";
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('data-status').innerText = "Error checking data status.";
+                    });
+            }
+        </script>  
+          
+        
+    </body>
+</html>
+

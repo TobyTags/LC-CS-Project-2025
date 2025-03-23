@@ -1,0 +1,350 @@
+
+
+/* start of styling for navbar ----------------------------------- */
+.navbar {
+    background-color: #333; /* Dark background for the navbar */
+    color: #ffffff;
+    text-align: center; /* Centers navbar contents */
+    padding: 10px 0; /* Adds padding inside the navbar */
+}
+
+/* Style for navigation links */
+.navbar a {
+    color: white; /* White text color */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Aligns links next to each other */
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    background-color: #4bbbbd; /* Changes background on hover */
+}
+
+/* Dropdown container setup */
+.dropdown {
+    position: relative; /* Needed for absolute positioning of dropdown content */
+    display: inline-block; /* Ensures the dropdown is aligned with other links */
+}
+
+/* Dropdown button styling */
+.dropbtn {
+    background-color: #333; /* Matches the navbar background */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No borders */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    border: 1px solid transparent; /* Ensures layout doesn't shift on hover */
+}
+
+.dropbtn:hover {
+    background-color: #4bbbbd;
+}
+
+/* Dropdown content box */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to its container */
+    background-color: #f9f9f9; /* Light background for the dropdown */
+    min-width: 160px; /* Minimum width */
+    max-height: 300px; /* Maximum height before scrolling */
+    overflow-y: auto; /* Enables vertical scrollbar when necessary */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+    z-index: 1; /* Keeps it on top of other content */
+}
+
+/* Styles for links inside the dropdown */
+.dropdown-content a {
+    color: black; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* Removes underline */
+    display: block; /* Ensures each link is on a new line */
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Showing the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Displays the dropdown content */
+}
+
+/* Adding a hover effect to dropdown links */
+.dropdown-content a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+}
+/* End of styling for the nav bar -------------------------------------------------*/
+
+
+/*  styling to apply to the hole page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+}
+
+/* this sets the colour for any h1 text on the page */
+h1 {
+  color: #4CAF50;
+}
+
+
+/* styling for the main btn that runs the script */
+.button-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;       /* Vertically center the content */
+    gap: 20px;                 /* Space between the button and the info */
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-width: 35%;
+    width: 100%; /* Ensures the max-width is enforced relative to the container's parent's width */
+
+    margin-left: 30%;
+
+  }
+
+.custom-button2 {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  border: 2px solid #ff7e5f;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+  transition: all 0.3s ease;
+}
+
+.custom-button2:hover {
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+  box-shadow: 0 17px 40px rgba(53, 66, 6, 0.6);
+}
+
+.custom-button2:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 10px rgba(255, 126, 95, 0.3);
+}
+
+
+.custom-button3 {
+  background: linear-gradient(90deg, #50a1d0, #aa4dd4);
+  border: 2px solid #54b6ce;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+  transition: all 0.3s ease;
+}
+
+.custom-button3:hover {
+  background: linear-gradient(90deg, #aa4dd4, #50a1d0);
+  box-shadow: 0 17px 40px rgba(40, 6, 162, 0.6);
+}
+
+.custom-button3:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 10px rgba(255, 126, 95, 0.3);
+}
+
+
+/* Styling for the info container */
+.info-container {
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+
+  
+
+#image-gallery {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: center; /* Center items horizontally */
+  padding: 20px;
+  background: #f9f9f9; /* Optional background for the gallery */
+}
+
+.gallery-item {
+  width: 300px;              /* Adjust width as needed */
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+  padding: 0 10px; /* Optional padding for text */
+}
+  
+
+
+
+
+
+
+
+
+/* -THIS IS HERE FOR THE FOOTER --------------- */
+.footer-space {
+  background-color: #24b75c;
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* Optional spacing from content above */
+}
+
+.topbtn {
+  background: linear-gradient(45deg, #d46c74, #36c8e2);
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.topbtn:hover {
+  background-color: #f4f4f4;
+  transform: translateY(-3px);
+}
+/* END OF STYLING FOR THE FOOTER ----------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* this allows the user to zoom into images */
+  .zoom-container {
+    width: 100%;
+    height: 200px;             /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .zoomable {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: grab;
+  }
+  /* END ZOOMING STYLING */
+
+
+
+
+
+
+
+
+/*styling here for the form */
+.form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-left: 40%;
+  margin-right: 60%;
+}
+
+.FormButton {
+  background: #2ebbe2;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.FormButton:hover {
+  background: #177490;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+

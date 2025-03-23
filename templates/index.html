@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Graphs Display</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body>
+        <!-- Nav bar code right here -->
+        <div class="navbar">
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">See Graphs per State</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('state_page', state='Alabama') }}">Alabama</a>
+                    <a href="{{ url_for('state_page', state='Arizona') }}">Arizona</a>
+                    <a href="{{ url_for('state_page', state='Arkansas') }}">Arkansas</a>
+                    <a href="{{ url_for('state_page', state='California') }}">California</a>
+                    <a href="{{ url_for('state_page', state='Colorado') }}">Colorado</a>
+                    <a href="{{ url_for('state_page', state='Connecticut') }}">Connecticut</a>
+                    <a href="{{ url_for('state_page', state='Florida') }}">Florida</a>
+                    <a href="{{ url_for('state_page', state='Georgia') }}">Georgia</a>
+                    <a href="{{ url_for('state_page', state='Idaho') }}">Idaho</a>
+                    <a href="{{ url_for('state_page', state='Illinois') }}">Illinois</a>
+                    <a href="{{ url_for('state_page', state='Indiana') }}">Indiana</a>
+                    <a href="{{ url_for('state_page', state='Iowa') }}">Iowa</a>
+                    <a href="{{ url_for('state_page', state='Kansas') }}">Kansas</a>
+                    <a href="{{ url_for('state_page', state='Kentucky') }}">Kentucky</a>
+                    <a href="{{ url_for('state_page', state='Louisiana') }}">Louisiana</a>
+                    <a href="{{ url_for('state_page', state='Maine') }}">Maine</a>
+                    <a href="{{ url_for('state_page', state='Maryland') }}">Maryland</a>
+                    <a href="{{ url_for('state_page', state='Massachusetts') }}">Massachusetts</a>
+                    <a href="{{ url_for('state_page', state='Michigan') }}">Michigan</a>
+                    <a href="{{ url_for('state_page', state='Minnesota') }}">Minnesota</a>
+                    <a href="{{ url_for('state_page', state='Mississippi') }}">Mississippi</a>
+                    <a href="{{ url_for('state_page', state='Missouri') }}">Missouri</a>
+                    <a href="{{ url_for('state_page', state='Montana') }}">Montana</a>
+                    <a href="{{ url_for('state_page', state='Nebraska') }}">Nebraska</a>
+                    <a href="{{ url_for('state_page', state='New Jersey') }}">New Jersey</a>
+                    <a href="{{ url_for('state_page', state='New Mexico') }}">New Mexico</a>
+                    <a href="{{ url_for('state_page', state='New York') }}">New York</a>
+                    <a href="{{ url_for('state_page', state='North Carolina') }}">North Carolina</a>
+                    <a href="{{ url_for('state_page', state='North Dakota') }}">North Dakota</a>
+                    <a href="{{ url_for('state_page', state='Ohio') }}">Ohio</a>
+                    <a href="{{ url_for('state_page', state='Oklahoma') }}">Oklahoma</a>
+                    <a href="{{ url_for('state_page', state='Oregon') }}">Oregon</a>
+                    <a href="{{ url_for('state_page', state='Pennsylvania') }}">Pennsylvania</a>
+                    <a href="{{ url_for('state_page', state='South Carolina') }}">South Carolina</a>
+                    <a href="{{ url_for('state_page', state='South Dakota') }}">South Dakota</a>
+                    <a href="{{ url_for('state_page', state='Tennessee') }}">Tennessee</a>
+                    <a href="{{ url_for('state_page', state='Texas') }}">Texas</a>
+                    <a href="{{ url_for('state_page', state='Utah') }}">Utah</a>
+                    <a href="{{ url_for('state_page', state='Vermont') }}">Vermont</a>
+                    <a href="{{ url_for('state_page', state='Virginia') }}">Virginia</a>
+                    <a href="{{ url_for('state_page', state='Washington') }}">Washington</a>
+                    <a href="{{ url_for('state_page', state='West Virginia') }}">West Virginia</a>
+                    <a href="{{ url_for('state_page', state='Wisconsin') }}">Wisconsin</a>
+                    <a href="{{ url_for('state_page', state='Wyoming') }}">Wyoming</a>
+                </div>
+            </div>
+            <a href="{{ url_for('OverallGraphs') }}">See overall graphs</a>
+            <a id="data-status">Checking data status... </a>
+        </div>
+
+        <!-- Main heading-->
+        <h1>Bee Population Visualiser</h1>
+
+        <div class="button-info-container">
+            <button class="custom-button2" onclick="runScripts()">Clean Data!</button> <!-- This Btn runs the scripts that parses and cleans data, then generating graphs-->
+
+            <div class="info-container">
+              <p>
+                This takes the raw data, parses it into a pandas dataframe, and cleans and then saves it as an overall collated CSV file for general use. Note that the rest of the graphs won't work if this script has not been run. Also, some random graphs are produced below just to show that it worked.
+              </p>
+            </div>
+        </div>
+          
+        <!-- This shows logging for the python scripts being run, 'Running scripts', "scripts executed successfully" ect-->
+        <p id="output"></p>
+
+        <!-- This is the main chunk of code that holds all of the generated graphs and allows the user to zoom into them-->
+        <div id="image-gallery">
+            {% if images|length > 0 %} <!-- this checks if there are any graphs to show, and if not then the text 'No Graphs, Run the script to load the data!' will show instead -->
+                {% for image in images %}
+                    <div class="gallery-item">
+                        <div class="zoom-container">
+                            <img class="zoomable" src="{{ url_for('get_image', filename=image) }}" alt="Graph">
+                        </div>
+                        <p>{{ image }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No Graphs, Run the script to load the data!</p>
+            {% endif %}
+        </div>
+        
+
+
+        <!-- this is the btn that deletes all graphs and processed data-->
+        <div class="button-info-container">
+            <button class="custom-button3" onclick="DeleteGraphsAndData()">Clear Data.</button>
+
+            <div class="info-container">
+              <p>
+                This removed the cleaned data folder and graphs folder, hence cleaning out anything that has been parsed or generated
+              </p>
+            </div>
+        </div>
+
+        
+
+        <!-- I can have my form here -->
+        <div class="form-container">
+            <h2>User Interactive Contact Form.</h2>
+            <form action="#" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email</label> <!-- This is the checker that forces the user to put in a real email-->
+                <input type="email" id="email" name="email" required>
+    
+                <label for="option">What State are you most interested in?</label>
+                <select id="option" name="option" required>
+                    <option value="" disabled selected>Select state</option>
+                    <option value="Alabama">Alabama</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Arkansas">Arkansas</option>
+                </select>
+    
+                <button class="FormButton" type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <script>
+            document.querySelector("form").addEventListener("submit", async function(event) {
+                event.preventDefault(); // Stop normal form submission
+
+                let formData = {
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    option: document.getElementById("option").value, // selected state by person
+                };
+
+                try {
+                    let response = await fetch('/DataBase', {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    let result = await response.json();
+                    
+                    if (result.message) {
+                        // on seccseffly sending data- Clear the form fields
+                        document.getElementById("name").value = "";
+                        document.getElementById("email").value = "";
+                        document.getElementById("option").value = "";
+
+                        alert("Success: " + result.message);
+                    } else {
+                        alert("Error: " + result.error);
+                    }
+                } catch (error) {
+                    console.error("Request failed", error);
+                }
+            });
+        </script>
+        
+
+
+        <!-- Black space at the end of the page (this stops the last graph from getting restricted)  -->
+        <div class="footer-space">
+            <a class="topbtn" href="#"><B>Back to top</B></a>
+        </div>
+
+        
+
+
+
+        <!-- this is in charge of js that allows user to zoom into graphs-->
+        <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // For each zoom container in the gallery, initialize Panzoom on the contained image.
+                document.querySelectorAll('.zoom-container').forEach(function(container) {
+                const image = container.querySelector('.zoomable');
+                const panzoomInstance = Panzoom(image, {
+                    maxScale: 5,
+                    contain: 'outside'
+                });
+                // Bind the wheel event on the container for zooming
+                container.addEventListener('wheel', panzoomInstance.zoomWithWheel);
+                });
+            });
+        </script>
+        <!-- End ---------------------------------------------------  -->
+          
+
+
+
+        <script>
+            function runScripts() {
+                document.getElementById('output').innerText = "Running scripts...";
+                fetch('/run-scripts', { method: 'POST' })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('output').innerText = data.message;
+                        if (data.images) {
+                            let gallery = document.getElementById('image-gallery');
+                            gallery.innerHTML = '';  // Clear previous images
+                            
+                            data.images.forEach(img => {
+                                let imgElement = document.createElement('img');
+                                imgElement.src = img;
+                                imgElement.alt = "Generated Graph";
+                                imgElement.width = 400;
+                                gallery.appendChild(imgElement);
+                            });
+                        }
+                    })  
+                    .then(text => { // this force reloads the web page
+                        console.log('Response from server:', text);
+                        // After 0.01 seconds, force reload the page
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 10);
+                    })
+                    .catch(error => {
+                        document.getElementById('output').innerText = 'Error running scripts!';
+                    });
+            }
+
+
+
+            function DeleteGraphsAndData() {
+                fetch('/delete_data')
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Response from server:', data);
+                })
+                .then(text => {
+                        console.log('Response from server:', text);
+                        // After 0.01 seconds, force reload the page - this will get rid of the graphs
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 10);
+                    })
+                .catch(error => console.error('Error:', error));
+            }
+
+
+            window.onload = function() {
+                //this is for the variable that says weather there is cleaned data or is it gone (deleted)
+                fetch('/DataTracker')
+                    .then(response => response.json())
+                    .then(data => {
+                        const statusDiv = document.getElementById('data-status');
+                        if (data.Data) {
+                            statusDiv.innerText = "Cleaned data exists.";
+                            statusDiv.style.backgroundColor = "green";
+                        } else {
+                            statusDiv.innerText = "Cleaned data does not exist.";
+                            statusDiv.style.backgroundColor = "red";
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('data-status').innerText = "Error checking data status.";
+                    });
+            }
+
+        </script>
+    </body>
+</html>
